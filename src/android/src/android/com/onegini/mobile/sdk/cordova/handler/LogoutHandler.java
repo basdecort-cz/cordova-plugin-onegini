@@ -43,6 +43,7 @@ public class LogoutHandler implements OneginiLogoutHandler{
 
   @Override
   public void onError(final OneginiLogoutError logoutError) {
+    logoutError.printStackTrace();
     final PluginResult pluginResult = new PluginResultBuilder()
         .withError()
         .withOneginiError(logoutError)

@@ -102,6 +102,7 @@ public class OneginiClient extends CordovaPlugin {
 
           @Override
           public void onError(final OneginiInitializationError initializationError) {
+            initializationError.printStackTrace();
             sendOneginiClientErrorResult(callbackContext, initializationError);
           }
         });

@@ -48,6 +48,7 @@ public class AuthenticationHandler implements OneginiAuthenticationHandler {
 
   @Override
   public void onError(final OneginiAuthenticationError oneginiAuthenticationError) {
+    oneginiAuthenticationError.printStackTrace();
     final PluginResultBuilder pluginResultBuilder = new PluginResultBuilder()
         .withError()
         .withOneginiError(oneginiAuthenticationError);
